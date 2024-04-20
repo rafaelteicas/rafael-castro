@@ -7,7 +7,7 @@
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 3%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
     --primary: 240 5.9% 10%;
@@ -29,7 +29,7 @@
   .dark {
     --background: 240 0% 6%;
     --foreground: 0 0% 95%;
-    --card: 240 10% 3.9%;
+    --card: 240 0% 6%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -51,6 +51,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-roboto);
 }
 
 body {
@@ -61,13 +62,54 @@ body {
 }
 
 h1 {
+  @apply text-5xl font-bold leading-normal;
+
+  font-family: var(--font-open);
+}
+
+h2 {
+  @apply text-4xl font-bold;
+}
+
+h3 {
+  @apply text-3xl font-bold;
+}
+
+h4 {
   @apply text-2xl font-bold;
 }
 
+h5 {
+  @apply text-xl font-bold;
+}
+
+h6 {
+  @apply text-lg font-bold;
+}
+
 p {
-  @apply text-muted-foreground text-sm;
+  @apply text-base leading-7 tracking-wide text-muted-foreground;
 }
 
 a {
   @apply text-sm font-light tracking-widest hover:text-foreground/55;
 }
+
+b {
+  @apply font-semibold text-foreground;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+

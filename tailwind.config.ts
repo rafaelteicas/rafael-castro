@@ -21,6 +21,10 @@ const config: Config = {
         secondary: 'hsl(var(--secondary))',
         foreground: 'hsl(var(--foreground))',
         shadow: 'hsl(var(--shadow))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
         'muted-foreground': 'hsl(var(--muted-foreground))',
       },
       boxShadow: {

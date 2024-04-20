@@ -1,28 +1,34 @@
 import { ToggleTheme } from '@/ui/toggle-theme'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 
-export function Navbar() {
+const menuLinks = [
+  { href: 'home', title: 'Home' },
+  { href: 'about', title: 'Sobre' },
+  { href: 'projects', title: 'Projetos' },
+  { href: 'tech', title: 'Tecnologias' },
+]
+
+interface Props {
+  visibleItem: string
+}
+
+export function Navbar({ visibleItem }: Props) {
   return (
-    <header className="sticky top-5">
-      <nav className="flex items-center justify-between text-sm">
-        <ul>
-          <li className="flex items-center space-x-10">
-            <Link
-              href="#home"
-              title="Home"
-              className="backdrop-blur-xs shadow-links rounded-full px-5 py-2 shadow-foreground/15"
-            >
-              Home
-            </Link>
-            <Link
-              href="#projects"
-              title="Home"
-              className="rounded-full px-5 py-2"
-            >
-              Projetos
-            </Link>
-          </li>
+    <header className="sticky top-10 z-10">
+      <nav className="flex items-center justify-between">
+        <ul className="flex flex-row items-center space-x-4">
+          {menuLinks.map((link) => (
+            <motion.li key={link.title} className="flex">
+              <Link
+                href={`#${link.href}`}
+                className={`rounded-full bg-background/10 px-4 py-2 text-sm leading-none ${visibleItem.toLowerCase() === link.href.toLowerCase() && 'shadow-links shadow-foreground/15 backdrop-blur-sm'}`}
+              >
+                {link.title}
+              </Link>
+            </motion.li>
+          ))}
         </ul>
         <ToggleTheme className="" />
       </nav>

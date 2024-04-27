@@ -1,19 +1,7 @@
 import type { Metadata } from 'next'
-import { Roboto, Open_Sans } from 'next/font/google'
 import '../css/globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
-
-const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
-  variable: '--font-roboto',
-  subsets: ['latin'],
-})
-
-const open = Open_Sans({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-open',
-})
+import { GeistSans } from 'geist/font/sans'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -27,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${roboto.variable} ${open.variable}`}>
+      <body className={GeistSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

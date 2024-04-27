@@ -16,14 +16,14 @@ interface Props {
 
 export function Navbar({ visibleItem }: Props) {
   return (
-    <header className="sticky top-10 z-10">
+    <header className="sticky top-10 z-10 ">
       <nav className="flex items-center justify-between">
         <ul className="flex flex-row items-center space-x-4">
           {menuLinks.map((link) => (
             <motion.li key={link.title} className="flex">
               <Link
                 href={`#${link.href}`}
-                className={`rounded-full bg-background/10 px-4 py-2 text-sm leading-none ${visibleItem.toLowerCase() === link.href.toLowerCase() && 'shadow-links shadow-foreground/15 backdrop-blur-sm'}`}
+                className={`rounded-full bg-background/10 px-4 py-2 text-sm leading-none ${visibleItem.toLowerCase() === link.href.toLowerCase() && 'scale-110 shadow-links shadow-foreground/35 backdrop-blur-sm transition'}`}
               >
                 {link.title}
               </Link>

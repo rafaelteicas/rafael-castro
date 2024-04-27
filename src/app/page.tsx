@@ -45,7 +45,7 @@ export default function Home() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed left-0 right-0 top-0 h-1 w-full origin-left bg-emerald-500/80"
+        className="fixed left-0 right-0 top-0 z-10 h-1 w-full origin-left bg-emerald-500/80"
       />
       <main className="mx-auto grid min-h-screen max-w-app grid-cols-app gap-20 space-y-10 antialiased">
         <Sidebar />

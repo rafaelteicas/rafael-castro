@@ -21,7 +21,7 @@ const technologies = [
 
 export const Technologies = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} id="tech" className="flex h-screen flex-col gap-4 py-20">
+    <section ref={ref} id="tech" className="my-20 flex h-screen flex-col gap-4">
       <h2>Tecnologias</h2>
       <Card>
         <ul className="flex flex-col gap-2">

@@ -30,9 +30,11 @@ const config: Config = {
       boxShadow: {
         navbar: '0 0 0 1px',
         links: '0 0 0 1px',
+        eye: 'inset 0px 1px 10px 3px rgba(0,0,0,0.7)',
       },
       blur: {
         xs: '2px',
+        xxs: '0.4px',
       },
     },
   },

@@ -1,4 +1,4 @@
-import { Card } from '@/components/card'
+import { Card } from '@/components'
 import { Badge } from '@/ui/badge'
 import { forwardRef } from 'react'
 
@@ -21,15 +21,15 @@ const technologies = [
 
 export const Technologies = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} id="tech" className="my-20 flex h-screen flex-col gap-4">
+    <section ref={ref} id="tech" className="mb-20 flex flex-col gap-4">
       <h2>Tecnologias</h2>
       <Card>
         <ul className="flex flex-col gap-2">
           {technologies.map((tech) => (
             <div key={tech.title}>
-              <h5 className="capitalize">{tech.title}</h5>
+              <h5 className="mb-2 capitalize">{tech.title}</h5>
               {tech.tech.map((tech) => (
-                <Badge variant="primary" key={tech} className="mr-4">
+                <Badge variant="primary" key={tech} className="mr-2">
                   {tech}
                 </Badge>
               ))}

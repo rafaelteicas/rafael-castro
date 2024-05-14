@@ -12,8 +12,6 @@ export function Eye({ className }: Props) {
   const x1 = (x * 100) / window.innerWidth + '%'
   const y1 = (y * 60) / window.innerHeight + '%'
 
-  console.log(y1)
-
   return (
     <div
       className={cn(

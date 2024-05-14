@@ -84,7 +84,7 @@ h5 {
 }
 
 h6 {
-  @apply text-lg font-bold;
+  @apply text-base font-bold;
 }
 
 p {

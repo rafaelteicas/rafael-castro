@@ -1,7 +1,8 @@
-import { Card } from '@/components/card'
+import { Card } from '@/components'
 import React, { forwardRef } from 'react'
 import Image from 'next/image'
-import { getAge } from '@/utils/getAge'
+import { getAge } from '@/utils'
+import { Brever } from '@/assets'
 
 const YEAR_OF_BIRTH = 2002
 
@@ -37,14 +38,24 @@ export const About = forwardRef<HTMLElement>((_, ref) => {
           />
         </Card>
       </div>
-      <div className="grid grid-cols-3 items-start gap-6">
+      <div className="grid grid-cols-2 gap-6">
+        <Card className="flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded border border-foreground/5 p-2">
+            <Brever className="fill-foreground" />
+          </div>
+          <div>
+            <h6>Brever</h6>
+            <p>Desenvolvedor mobile</p>
+          </div>
+        </Card>
         <Card>
           <span className="flex items-center gap-2">
             📚 <h6>Formação</h6>
           </span>
           <p>Graduando em Eng. Software</p>
         </Card>
-
+      </div>
+      <div className="grid grid-cols-3 items-start gap-6">
         <Card>
           <span className="flex items-center gap-2">
             📝 <h6> Metas</h6>

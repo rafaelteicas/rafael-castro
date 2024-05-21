@@ -47,7 +47,7 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
         className="fixed left-0 right-0 top-0 z-10 h-1 w-full origin-left bg-emerald-500/80"
       />
-      <main className="mx-auto grid min-h-screen max-w-app grid-cols-app gap-20 space-y-10 antialiased">
+      <main className="mx-auto grid gap-20 space-y-10 antialiased lg:max-w-screen-xl lg:grid-cols-app">
         <Sidebar />
         <div className="flex flex-col">
           <Navbar visibleItem={visibleItem} />

@@ -14,7 +14,7 @@ const config: Config = {
         app: '1280px',
       },
       height: {
-        sidebar: '95%',
+        sidebar: '80%',
       },
       colors: {
         background: 'hsl(var(--background))',

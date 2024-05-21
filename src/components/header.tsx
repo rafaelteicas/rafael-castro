@@ -16,8 +16,8 @@ interface Props {
 
 export function Navbar({ visibleItem }: Props) {
   return (
-    <header className="sticky top-10 z-10 ">
-      <nav className="flex items-center justify-between">
+    <header className="sticky top-10 z-10">
+      <nav className=" hidden max-w-[90%] items-center justify-between px-8 sm:flex md:max-w-full xl:px-0">
         <ul className="flex flex-row items-center space-x-4">
           {menuLinks.map((link) => (
             <motion.li key={link.title} className="flex">
@@ -30,7 +30,7 @@ export function Navbar({ visibleItem }: Props) {
             </motion.li>
           ))}
         </ul>
-        <ToggleTheme className="" />
+        <ToggleTheme />
       </nav>
     </header>
   )

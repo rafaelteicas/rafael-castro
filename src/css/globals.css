@@ -52,6 +52,15 @@
 * {
   box-sizing: border-box;
   font-family: var(--font-roboto);
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(16 185 129 / 0.8);
+  }
 }
 
 body {
@@ -112,4 +121,3 @@ b {
     opacity: 0;
   }
 }
-

@@ -7,7 +7,7 @@ export const Hero = forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id="home"
-      className="flex h-screen items-center justify-center"
+      className="flex h-screen items-center justify-center px-10 xl:px-0"
     >
       <div className="space-y-6">
         <Badge className="gap-2">
